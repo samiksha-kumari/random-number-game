@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Number Guesser</title>
+  </head>
+  <body>
+    <h2>Random Number Game</h2>
+    <h1>The rules of game are:</h1>
+    <ul>
+      <li>When the game starts, you have 1000 INR</li>
+      <li>
+        Every time you click Start, 3 random numbers are generated. 100 INR gets
+        deducted
+      </li>
+      <li>
+        Every try generates three random numbers, each random number is in 0-9
+        range
+      </li>
+      <li>If all the numbers are odd/even (eg. 2 4 6), you get 300 INR</li>
+      <li>
+        If the numbers are in sequence with difference of 1 in any order (eg. 2
+        3 4 or 3 2 4 or 4 6 5), you get 800 INR
+      </li>
+      <li>If all the numbers are same (eg. 4 4 4), you get 1000 INR</li>
+      <li>If INR reaches 0, your game is over</li>
+      <div>You have <span id="moneyLeft"></span> INR</div>
+      <button id="startButton" onclick="startGame()">Start</button>
+    </ul>
+  </body>
+
+  <script>
+    document.getElementById("moneyLeft").innerHTML = 1000;
+    document.getElementById("startButton").onclick = function() {
+      location.href = "Number-game.html";
+    };
+  </script>
+</html>
