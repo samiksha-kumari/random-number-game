@@ -43,17 +43,18 @@
         getAbsoluteDifference(num1, num2) == 1 &&
         getAbsoluteDifference(num2, num3) == 1;
       let allNumSame = num1 == num2 && num2 == num3;
-      if (allEven) {
+      if (allNumSame) {
+        message = "You were lucky this time. You got 1000 INR as all numbers are same"
+        balance = balance + 1000;
+      }
+       else if (allEven) {
         message = "You were lucky this time. You got 300 INR as all numbers are even" 
         balance = balance + 300;
       }else if(allOdd){
         message = "You were lucky this time. You got 300 INR as all numbers are odd" 
         balance = balance + 300;
       }
-       else if (allNumSame) {
-        message = "You were lucky this time. You got 1000 INR as all numbers are same"
-        balance += 1000;
-      } else if (numInSequence &&  ((num1 > num2 > num3) || (num1< num2 < num3))) {
+       else if (numInSequence &&  ((num1 > num2 > num3) || (num1< num2 < num3))) {
         
         balance += 800;
         message = "You were lucky this time, You got 800 INR as all numbers is in sequence"
